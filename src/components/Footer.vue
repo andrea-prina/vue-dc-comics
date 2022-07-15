@@ -3,7 +3,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-4 pt-4 pb-4">
                     <div class="container-fluid p-0">
                         <div class="row">
                             <div class="col-4">
@@ -52,8 +52,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-8 text-end">
-                    LOGO
+                <div class="col-8 position-relative overflow-hidden">
+                    <img class="background-logo" src="../assets/img/dc-logo-bg.png" alt="DC background logo">
                 </div>
             </div>
         </div>
@@ -73,8 +73,15 @@ footer {
     background-image: url("../assets/img/footer-bg.jpg");
     background-size: cover;
     color: white;
-    padding: 2rem 0;
     font-size: 0.75rem;
+}
+
+.background-logo {
+    // TODO: Create mixins
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 </style>

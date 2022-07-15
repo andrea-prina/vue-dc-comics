@@ -3,6 +3,7 @@
     <div>
       <Header/>
       <Main/>
+      <ActionsBar/>
       <Footer/>
       <SocialBar/>
     </div>
@@ -12,6 +13,7 @@
 <script>
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
+import ActionsBar from './components/ActionsBar.vue';
 import Footer from './components/Footer.vue';
 import SocialBar from './components/SocialBar.vue';
 
@@ -21,6 +23,7 @@ export default {
   components: {
     Header,
     Main,
+    ActionsBar,
     Footer,
     SocialBar,
   }

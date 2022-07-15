@@ -30,7 +30,6 @@ export default {
 
     header {
         padding: 1rem 0;
-        border: 1px solid red;
 
         img {
             width: 70px;
