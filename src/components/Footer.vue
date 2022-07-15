@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <div class="container-fluid">
+                    <div class="container-fluid p-0">
                         <div class="row">
                             <div class="col-4">
                                 <h6>DC COMICS</h6>
@@ -71,6 +71,7 @@ export default {
 
 footer {
     background-image: url("../assets/img/footer-bg.jpg");
+    background-size: cover;
     color: white;
     padding: 2rem 0;
     font-size: 0.75rem;

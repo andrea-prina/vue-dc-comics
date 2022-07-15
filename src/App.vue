@@ -4,6 +4,7 @@
       <Header/>
       <Main/>
       <Footer/>
+      <SocialBar/>
     </div>
   </div>
 </template>
@@ -12,6 +13,7 @@
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
 import Footer from './components/Footer.vue';
+import SocialBar from './components/SocialBar.vue';
 
 
 export default {
@@ -20,17 +22,12 @@ export default {
     Header,
     Main,
     Footer,
+    SocialBar,
   }
 }
 </script>
 
 <style lang="scss">
 @import '~bootstrap';
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
 </style>
