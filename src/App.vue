@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="wrapper">
+    <div>
       <Header/>
       <Main/>
       <Footer/>
@@ -25,17 +25,13 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./style/general.scss";
+@import '~bootstrap';
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
-  .wrapper {
-    width: 80%;
-    min-width: 1000px;
-    margin: 0 auto;
   }
 
 </style>
