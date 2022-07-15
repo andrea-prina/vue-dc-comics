@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <Header/>
-    <Main/>
-    <Footer/>
+    <div class="wrapper">
+      <Header/>
+      <Main/>
+      <Footer/>
+    </div>
   </div>
 </template>
 
@@ -23,5 +25,17 @@ export default {
 </script>
 
 <style lang="scss">
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .wrapper {
+    width: 80%;
+    min-width: 1000px;
+    margin: 0 auto;
+  }
 
 </style>
