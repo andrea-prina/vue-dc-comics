@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="wrapper d-flex justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
             <img src="../assets/img/dc-logo.png" alt="dc logo">
             <nav>
                 <ul>
@@ -27,12 +27,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../style/general.scss";
 
     header {
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
         padding: 1rem 0;
         border: 1px solid red;
 
@@ -43,6 +39,7 @@ export default {
 
     nav > ul {
         list-style: none;
+        margin-bottom: 0;
             
         li {
             display: inline-block;
