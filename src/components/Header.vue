@@ -4,16 +4,16 @@
             <img src="../assets/img/dc-logo.png" alt="dc logo">
             <nav>
                 <ul>
-                    <li>Character</li>
-                    <li>Comics</li>
-                    <li>Movies</li>
-                    <li>TV</li>
-                    <li>Games</li>
-                    <li>Collectibles</li>
-                    <li>Videos</li>
-                    <li>Fans</li>
-                    <li>News</li>
-                    <li>Shops</li>
+                    <li><a href="">Character</a></li>
+                    <li class="active"><a href="">Comics</a></li>
+                    <li><a href="">Movies</a></li>
+                    <li><a href="">TV</a></li>
+                    <li><a href="">Games</a></li>
+                    <li><a href="">Collectibles</a></li>
+                    <li><a href="">Videos</a></li>
+                    <li><a href="">Fans</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Shops</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,9 +27,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../style/variables.scss";
 
     header {
-        padding: 1rem 0;
+        
 
         img {
             width: 70px;
@@ -43,8 +44,26 @@ export default {
         li {
             display: inline-block;
             margin: 0 0 0 2rem;
-            text-transform: uppercase;
+            padding: 3rem 0;
+            border-bottom: 5px solid white;
+
+            &.active, &:hover {
+                border-bottom: 5px solid $brand-color;
+            }
+            
+            a {
+                padding: 3rem 0;
+                text-decoration: none;
+                color: black;
+                text-transform: uppercase;
+            }
+
+            &.active a, &:hover a {
+                color: $brand-color;
+            }
+
         }
+
     }
 
 </style>
