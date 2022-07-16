@@ -7,46 +7,33 @@
                     <div class="container-fluid p-0">
                         <div class="row">
                             <div class="col-4">
-                                <h6>DC COMICS</h6>
+                                <h5>DC COMICS</h5>
                                 <ul class="list-unstyled">
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
+                                    <li v-for="(link, index) in dcComicsLinks" :key="index">
+                                        <a :href="link.url">{{link.text}}</a>
+                                    </li>
                                 </ul>
-                                <h6>SHOP</h6>
+                                <h5>SHOP</h5>
                                 <ul class="list-unstyled">
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
+                                    <li v-for="(link, index) in dcShopsLinks" :key="index">
+                                        <a :href="link.url">{{link.text}}</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-4">
-                                <h6>DC COMICS</h6>
+                                <h5>DC</h5>
                                 <ul class="list-unstyled">
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
+                                    <li v-for="(link, index) in dcLinks" :key="index">
+                                        <a :href="link.url">{{link.text}}</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-4">
-                                <h6>DC COMICS</h6>
+                                <h5>SITES</h5>
                                 <ul class="list-unstyled">
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
-                                    <li>ITEM</li>
+                                    <li v-for="(link, index) in dcSitesLinks" :key="index">
+                                        <a :href="link.url">{{link.text}}</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -63,6 +50,125 @@
 
 <script>
 export default {
+
+    data: function(){
+        return{
+
+            dcComicsLinks : [
+                {
+                    'text' : 'Characters',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Comics',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Movies',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'TV',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Games',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Videos',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'News',
+                    'url' : '#'
+                },
+                
+            ],
+
+            dcShopsLinks : [
+                {
+                    'text' : 'Shop DC',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Shop DC Collectibles',
+                    'url' : '#'
+                }
+            ],
+
+            dcLinks : [
+                {
+                    'text' : 'Terms of Use',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Privacy Policy (New)',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Ad Choices',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Advertising',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Jobs',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Subscriptions',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Talent Workshop',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'CPSC Certificates',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Ratings',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Shop Help',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'Contact Us',
+                    'url' : '#'
+                }
+            ],
+
+            dcSitesLinks : [
+                {
+                    'text' : 'DC',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'MAD Magazine',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'DC Kids',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'DC Universe',
+                    'url' : '#'
+                },
+                {
+                    'text' : 'DC Power Vise',
+                    'url' : '#'
+                },                
+            ],
+
+        }
+    }
 
 }
 </script>
@@ -82,6 +188,11 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+a {
+    text-decoration: none;
+    color: grey;
 }
 
 </style>
