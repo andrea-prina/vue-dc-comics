@@ -44,15 +44,17 @@ export default {
         li {
             display: inline-block;
             margin: 0 0 0 2rem;
-            padding: 3rem 0;
             border-bottom: 5px solid white;
 
             &.active, &:hover {
                 border-bottom: 5px solid $brand-color;
             }
             
+            &, a {
+                padding: 2.5rem 0;
+            }
+
             a {
-                padding: 3rem 0;
                 text-decoration: none;
                 color: black;
                 text-transform: uppercase;
