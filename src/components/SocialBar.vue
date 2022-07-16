@@ -4,7 +4,7 @@
         <div class="container d-flex justify-content-between">
             <a href="" class="btn">SIGN-UP NOW!</a>
             <div class="d-flex align-items-center">
-                <h6>FOLLOW US</h6>
+                <h6 class="mb-0"><a href="">FOLLOW US</a></h6>
                 <a class="ms-3" href=""><img src="../assets/img/footer-facebook.png" alt="facebook-logo"></a>
                 <a class="ms-3" href=""><img src="../assets/img/footer-twitter.png" alt="twitter-logo"></a>
                 <a class="ms-3" href=""><img src="../assets/img/footer-youtube.png" alt="youtube-logo"></a>
@@ -34,7 +34,8 @@ export default {
             color: white;
         }
 
-        h6 {
+        a {
+            text-decoration: none;
             color: $brand-color;
             margin-bottom: 0;
             font-weight: bold;
