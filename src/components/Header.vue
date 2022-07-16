@@ -4,16 +4,9 @@
             <img src="../assets/img/dc-logo.png" alt="dc logo">
             <nav>
                 <ul>
-                    <li><a href="">Character</a></li>
-                    <li class="active"><a href="">Comics</a></li>
-                    <li><a href="">Movies</a></li>
-                    <li><a href="">TV</a></li>
-                    <li><a href="">Games</a></li>
-                    <li><a href="">Collectibles</a></li>
-                    <li><a href="">Videos</a></li>
-                    <li><a href="">Fans</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Shops</a></li>
+                    <li v-for="(link, index) in navbarItems" :key="index" :class="{active : link.selected}">
+                        <a :href="link.url">{{link.text}}</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -22,7 +15,71 @@
 
 <script>
 export default {
+    data: function(){
+        return{
+            navbarItems : [
+                {
+                    'text' : 'Characters',
+                    'url' : '#',
+                    'selected' : false
+                },
+                
+                {
+                    'text' : 'Comics',
+                    'url' : '#',
+                    'selected' : true
+                },
 
+                {
+                    'text' : 'Movies',
+                    'url' : '#',
+                    'selected' : false
+                },
+
+                {
+                    'text' : 'TV',
+                    'url' : '#',
+                    'selected' : false
+                },
+
+                {
+                    'text' : 'Games',
+                    'url' : '#',
+                    'selected' : false
+                },
+
+                {
+                    'text' : 'Collectibles',
+                    'url' : '#',
+                    'selected' : false
+                },
+                
+                {
+                    'text' : 'Videos',
+                    'url' : '#',
+                    'selected' : false
+                },
+
+                {
+                    'text' : 'Fans',
+                    'url' : '#',
+                    'selected' : false
+                },
+
+                {
+                    'text' : 'News',
+                    'url' : '#',
+                    'selected' : false
+                },
+
+                {
+                    'text' : 'Shops',
+                    'url' : '#',
+                    'selected' : false
+                }
+            ]
+        }
+    }
 }
 </script>
 
