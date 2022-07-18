@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div class="container d-flex">
+        <div class="container d-flex flex-wrap">
             <ComicCard v-for="(comic, index) in comics" :key="index"
             :thumbImg="comic.thumb"
             :comicPrice="comic.price"
