@@ -1,12 +1,17 @@
 <template>
     <main>
-        <div class="container-fluid jumbotron"></div>
-        <div class="container d-flex flex-wrap pt-4 pb-4">
+        <div class="container-fluid jumbotron">
+        </div>
+        <div class="container d-flex flex-wrap justify-content-center pt-4 pb-4 position-relative">
+            <div class="section-label">CURRENT SERIES</div>
+
             <ComicCard v-for="(comic, index) in comics" :key="index"
             :thumbImg="comic.thumb"
             :comicPrice="comic.price"
             :comicSeries="comic.series"
             :comicType="comic.type"/>
+
+            <button class="btn branded-button">LOAD MORE</button>
         </div>
 
     </main>
@@ -104,17 +109,36 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "../style/variables.scss";
 
     main {
         background-color: #000;
         color: #FFF;
+
+        .section-label {
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: $brand-color;
+            position: absolute;
+            padding: 0.5rem 2rem;
+            top: -1.2rem;
+            left: 0.5rem;
+        }
+
+        .branded-button {
+            background-color: $brand-color;
+            padding: 0.5rem 4rem;
+            color: white;
+        }
     }
 
     .jumbotron {
+        position: relative;
         background-image: url("../assets/img/jumbotron.jpg");
         background-size: cover;
         height: 400px;
+
     }
 
 </style>
