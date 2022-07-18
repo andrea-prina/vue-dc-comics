@@ -1,12 +1,14 @@
 <template>
     <main>
-        <div class="container d-flex flex-wrap">
+        <div class="container-fluid jumbotron"></div>
+        <div class="container d-flex flex-wrap pt-4 pb-4">
             <ComicCard v-for="(comic, index) in comics" :key="index"
             :thumbImg="comic.thumb"
             :comicPrice="comic.price"
             :comicSeries="comic.series"
             :comicType="comic.type"/>
         </div>
+
     </main>
 </template>
 
@@ -107,7 +109,12 @@ export default {
     main {
         background-color: #000;
         color: #FFF;
-        padding: 3rem 0rem;
+    }
+
+    .jumbotron {
+        background-image: url("../assets/img/jumbotron.jpg");
+        background-size: cover;
+        height: 400px;
     }
 
 </style>
